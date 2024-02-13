@@ -1,0 +1,24 @@
+monsieurbiz_sylius_settings:
+    plugins:
+        monsieurbiz_scripts.scripts:
+            vendor_name: Monsieur Biz
+            plugin_name: monsieurbiz_scripts.settings.scripts.plugin_name
+            description: monsieurbiz_scripts.settings.scripts.description
+            icon: js square
+            use_locales: true
+            classes:
+                form: MonsieurBiz\SyliusScriptsPlugin\Form\Type\Settings\ScriptsType
+            default_values:
+                before_head_end: |
+                    <script type="text/javascript">console.log('Before head end script settings');</script>
+                after_body_start: |
+                    <script type="text/javascript">console.log('After body start script settings');</script>
+                before_body_end: |
+                    <script type="text/javascript">console.log('Before body end script settings');</script>
+                checkout_success: |
+                    <script type="text/javascript">
+                        console.log('Checkout success script settings');
+                        console.log('Order number : %%orderNumber%%');
+                        console.log('Order amount : %%orderAmount%%');
+                        console.log('Order currency : %%orderCurrency%%');
+                    </script>

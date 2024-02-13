@@ -1,0 +1,5 @@
+{{ setting('monsieurbiz_scripts.scripts', 'checkout_success')|replace({
+    '%orderNumber%': order.number|default(''),
+    '%orderAmount%': order.total|default(0),
+    '%orderCurrency%': order.currencyCode|default(''),
+})|raw }}

@@ -1,0 +1,20 @@
+monsieurbiz_scripts:
+    form:
+        before_head_end: 'Script before closing <head> tag'
+        after_body_start: 'Script after opening <body> tag'
+        before_body_end: 'Script before closing <body> tag'
+        checkout_success: 'Script on the success order page'
+        checkout_success_help: |
+            <div class="ui segment secondary">
+                <p>Available variables</p>
+                Order :
+                    <ul>
+                        <li>Order number : %orderNumber%</li>
+                        <li>Order amount : %orderAmount%</li>
+                        <li>Order currency : %orderCurrency%</li>
+                    </ul>
+            </div>
+    settings:
+        scripts:
+            plugin_name: Scripts
+            description: Scripts management

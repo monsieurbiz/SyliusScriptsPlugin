@@ -1,0 +1,20 @@
+monsieurbiz_scripts:
+    form:
+        before_head_end: 'Script avant fermeture de la balise <head>'
+        after_body_start: 'Script après ouverture de la balise <body>'
+        before_body_end: 'Script avant fermeture de la balise <body>'
+        checkout_success: 'Script sur la page de finalisation de commande'
+        checkout_success_help: |
+            <div class="ui segment secondary">
+                <p>Variables disponibles</p>
+                Commande :
+                    <ul>
+                        <li>Numéro de commande : %orderNumber%:</li>
+                        <li>Montant de la commande : %orderAmount%:</li>
+                        <li>Devise de la commande : %orderCurrency%:</li>
+                    </ul>
+            </div>
+    settings:
+        scripts:
+            plugin_name: Scripts
+            description: Gestion des scripts

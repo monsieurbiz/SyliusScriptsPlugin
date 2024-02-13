@@ -1,0 +1,2 @@
+imports:
+    resource: '@MonsieurBizSyliusScriptsPlugin/Resources/config/config.yaml'
