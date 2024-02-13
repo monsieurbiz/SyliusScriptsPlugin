@@ -1,2 +1,9 @@
 imports:
     resource: '@MonsieurBizSyliusScriptsPlugin/Resources/config/config.yaml'
+
+monsieurbiz_sylius_settings:
+    plugins:
+        monsieurbiz_scripts.scripts:
+            default_values:
+                before_head_end: |
+                    <script type="text/javascript">console.log('My script');</script>

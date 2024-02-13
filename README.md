@@ -25,6 +25,34 @@ For example, add Google Analytics, Facebook Pixel, or any other tracking script.
 composer require monsieurbiz/sylius-scripts-plugin
 ```
 
+Create the config file in `config/packages/monsieurbiz_sylius_scripts_plugin.yaml`:
+
+```yaml
+imports:
+    resource: '@MonsieurBizSyliusScriptsPlugin/Resources/config/config.yaml'
+```
+
 # Configuration
 
-In progress
+Go to the admin panel, then `Settings` > `Scripts` and add your scripts:
+
+![Screenshot of the scripts form in admin panel](./docs/images/admin.png)
+
+And that's it! Your scripts will be added:
+
+![Screenshot of the shop example](./docs/images/front_example.png)
+
+# How to
+
+## Change the default settings values for your project
+
+Open the `config/packages/monsieurbiz_sylius_scripts_plugin.yaml` file and change the default values. For example:
+
+```yaml
+monsieurbiz_sylius_settings:
+    plugins:
+        monsieurbiz_scripts.scripts:
+            default_values:
+                before_head_end: |
+                    <script type="text/javascript">console.log('My script');</script>
+```
