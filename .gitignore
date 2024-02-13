@@ -1,0 +1,17 @@
+/vendor/
+/composer.lock
+
+/tests/Application
+
+/behat.yml
+/phpspec.yml
+
+/var
+/public
+/bin
+/.php-version
+/php.ini
+/.phpunit.result.cache
+/node_modules
+/yarn.lock
+/.php-cs-fixer.cache
