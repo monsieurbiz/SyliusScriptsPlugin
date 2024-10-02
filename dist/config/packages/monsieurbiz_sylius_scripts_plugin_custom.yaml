@@ -1,6 +1,3 @@
-imports:
-    resource: '@MonsieurBizSyliusScriptsPlugin/Resources/config/config.yaml'
-
 monsieurbiz_sylius_settings:
     plugins:
         monsieurbiz_scripts.scripts:

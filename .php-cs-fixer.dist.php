@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Monsieur Biz' Advanced Promotion plugin for Sylius.
+ * This file is part of Monsieur Biz' Scripts plugin for Sylius.
  *
  * (c) Monsieur Biz <sylius@monsieurbiz.com>
  *
@@ -14,6 +14,7 @@ declare(strict_types=1);
 $header = <<<'HEADER'
 This file is part of Monsieur Biz' Scripts plugin for Sylius.
 (c) Monsieur Biz <sylius@monsieurbiz.com>
+
 For the full copyright and license information, please view the LICENSE.txt
 file that was distributed with this source code.
 HEADER;

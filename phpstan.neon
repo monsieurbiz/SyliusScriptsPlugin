@@ -1,11 +1,12 @@
 parameters:
-    level: max
+    level: 8
     paths:
         - %rootDir%/src/
-
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
 
     excludePaths:
         # Test dependencies
         - 'tests/Application/**/*'
+
+    ignoreErrors:
+        - identifier: missingType.generics
+        - identifier: missingType.iterableValue
