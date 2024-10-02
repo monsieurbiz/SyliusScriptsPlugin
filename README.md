@@ -12,14 +12,29 @@
 
 <h1 align="center">Scripts Settings for Sylius</h1>
 
-[![Scripts Plugin license](https://img.shields.io/github/license/monsieurbiz/SyliusScriptsPlugin?public&nocache)](https://github.com/monsieurbiz/SyliusScriptsPlugin/blob/master/LICENSE)
-[![Tests Status](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions/workflows/tests.yaml/badge.svg?branch=master&event=push)](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions?query=workflow%3ATests)
-[![Security Status](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions/workflows/security.yaml/badge.svg?branch=master&event=push)](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions?query=workflow%3ASecurity)
+[![Scripts Plugin license](https://img.shields.io/github/license/monsieurbiz/SyliusScriptsPlugin?public)](https://github.com/monsieurbiz/SyliusScriptsPlugin/blob/master/LICENSE.txt)
+[![Tests Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusScriptsPlugin/tests.yaml?branch=master&logo=github)](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions?query=workflow%3ATests)
+[![Recipe Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusScriptsPlugin/recipe.yaml?branch=master&label=recipes&logo=github)](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions?query=workflow%3ASecurity)
+[![Security Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusScriptsPlugin/security.yaml?branch=master&label=security&logo=github)](https://github.com/monsieurbiz/SyliusScriptsPlugin/actions?query=workflow%3ASecurity)
 
 This plugin lets you add JS scripts from the admin panel. You can add scripts to the header or the footer of your website.  
 For example, add Google Analytics, Facebook Pixel, or any other tracking script.
 
-# Installation
+## Compatibility
+
+| Sylius Version | PHP Version |
+|---|---|
+| 1.11 | 8.0 - 8.1 |
+| 1.12 | 8.1 - 8.2 |
+| 1.13 | 8.1 - 8.2 |
+
+## Installation
+
+If you want to use our recipes, you can configure your composer.json by running:
+
+```bash
+composer config --no-plugins --json extra.symfony.endpoint '["https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master","flex://defaults"]'
+```
 
 ```bash
 composer require monsieurbiz/sylius-scripts-plugin
