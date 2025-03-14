@@ -22,3 +22,5 @@ monsieurbiz_sylius_settings:
                         console.log('Order amount : %%orderAmount%%');
                         console.log('Order currency : %%orderCurrency%%');
                     </script>
+                admin_javascripts: |
+                    <script type="text/javascript">console.log('Admin javascripts settings');</script>

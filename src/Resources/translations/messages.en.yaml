@@ -14,6 +14,7 @@ monsieurbiz_scripts:
                         <li>Order currency : %orderCurrency%</li>
                     </ul>
             </div>
+        admin_javascripts: 'Script on the administration pages'
     settings:
         scripts:
             plugin_name: Scripts
