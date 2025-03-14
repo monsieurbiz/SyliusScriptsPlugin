@@ -62,5 +62,17 @@ class ScriptsType extends AbstractSettingsType implements SettingsTypeInterface
                 'help_html' => true,
             ]
         );
+
+        if ($this->isDefaultForm($builder)) {
+            $this->addWithDefaultCheckbox(
+                $builder,
+                'admin_javascripts',
+                TextareaType::class,
+                [
+                    'label' => 'monsieurbiz_scripts.form.admin_javascripts',
+                    'required' => false,
+                ]
+            );
+        }
     }
 }

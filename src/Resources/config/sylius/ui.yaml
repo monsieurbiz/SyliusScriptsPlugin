@@ -20,3 +20,8 @@ sylius_ui:
                 monsieurbiz_scripts_checkout_success:
                     template: "@MonsieurBizSyliusScriptsPlugin/Shop/Scripts/_checkoutSuccess.html.twig"
                     priority: 9999
+        sylius.admin.layout.javascripts:
+            blocks:
+                monsieurbiz_scripts_admin_javascripts:
+                    template: "@MonsieurBizSyliusScriptsPlugin/Admin/Scripts/_javascripts.html.twig"
+                    priority: 9999
