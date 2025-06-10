@@ -24,9 +24,9 @@ For example, add Google Analytics, Facebook Pixel, or any other tracking script.
 
 | Sylius Version | PHP Version     |
 |----------------|-----------------|
-| 1.12           | 8.1 - 8.2 - 8.3 |
-| 1.13           | 8.1 - 8.2 - 8.3 |
-| 1.14           | 8.1 - 8.2 - 8.3 |
+| 2.0            | 8.2 - 8.3       |
+
+ℹ️ For Sylius 1.x, see our [1.x branch](https://github.com/monsieurbiz/SyliusScriptsPlugin/tree/1.x) and all 1.x releases.
 
 ## Installation
 
