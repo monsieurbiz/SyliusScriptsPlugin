@@ -2,25 +2,25 @@ sylius_twig_hooks:
     hooks:
         sylius_shop.base#metatags:
             monsieurbiz_scripts_before_head_end:
-                template: '@MonsieurBizSyliusScriptsPlugin/Shop/Scripts/_beforeHeadEnd.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_before_head_end.html.twig'
                 priority: 9999
 
         sylius_shop.base.header:
             monsieurbiz_scripts_after_body_start:
-                template: '@MonsieurBizSyliusScriptsPlugin/Shop/Scripts/_afterBodyStart.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_after_body_start.html.twig'
                 priority: 9999
 
         sylius_shop.base#javascripts:
             monsieurbiz_scripts_before_body_end:
-                template: '@MonsieurBizSyliusScriptsPlugin/Shop/Scripts/_beforeBodyEnd.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_before_body_end.html.twig'
                 priority: 9999
 
         sylius_shop.order.thank_you:
             monsieurbiz_scripts_checkout_success:
-                template: '@MonsieurBizSyliusScriptsPlugin/Shop/Scripts/_checkoutSuccess.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_checkout_success.html.twig'
                 priority: 9999
 
         sylius_admin.base#metatags:
             monsieurbiz_scripts_admin_javascripts:
-                template: '@MonsieurBizSyliusScriptsPlugin/Admin/Scripts/_javascripts.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/admin/scripts/_javascripts.html.twig'
                 priority: 9999
