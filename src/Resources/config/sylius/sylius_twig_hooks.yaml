@@ -2,25 +2,31 @@ sylius_twig_hooks:
     hooks:
         sylius_shop.base#metatags:
             monsieurbiz_scripts_before_head_end:
-                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_before_head_end.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/before_head_end.html.twig'
                 priority: 9999
 
-        sylius_shop.base.header:
+        sylius_shop.base#body_classes:
             monsieurbiz_scripts_after_body_start:
-                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_after_body_start.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
+                priority: 9999
+
+        # This hook is used to add scripts in the header of the checkout pages because the checkout does not use sylius_shop.base#body_classes
+        sylius_shop.checkout.common.header:
+            monsieurbiz_scripts_after_body_start_cart:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
                 priority: 9999
 
         sylius_shop.base#javascripts:
             monsieurbiz_scripts_before_body_end:
-                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_before_body_end.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/before_body_end.html.twig'
                 priority: 9999
 
         sylius_shop.order.thank_you:
             monsieurbiz_scripts_checkout_success:
-                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/_checkout_success.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/checkout_success.html.twig'
                 priority: 9999
 
         sylius_admin.base#metatags:
             monsieurbiz_scripts_admin_javascripts:
-                template: '@MonsieurBizSyliusScriptsPlugin/admin/scripts/_javascripts.html.twig'
+                template: '@MonsieurBizSyliusScriptsPlugin/admin/scripts/javascripts.html.twig'
                 priority: 9999
