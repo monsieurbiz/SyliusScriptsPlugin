@@ -5,9 +5,9 @@
     "description": "Allows you to add JS scripts from the admin panel.",
     "license": "MIT",
     "require": {
-        "monsieurbiz/sylius-settings-plugin": "^2.0.0",
+        "monsieurbiz/sylius-settings-plugin": "^2.0",
         "php": "^8.2",
-        "sylius/sylius": "~2.0.0"
+        "sylius/sylius": "~2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.16",
