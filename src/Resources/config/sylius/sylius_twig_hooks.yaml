@@ -5,7 +5,7 @@ sylius_twig_hooks:
                 template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/before_head_end.html.twig'
                 priority: 9999
 
-        sylius_shop.base#body_classes:
+        sylius_shop.base.header:
             monsieurbiz_scripts_after_body_start:
                 template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
                 priority: 9999
