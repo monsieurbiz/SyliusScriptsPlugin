@@ -10,7 +10,7 @@ sylius_twig_hooks:
                 template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
                 priority: 9999
 
-        # This hook is used to add scripts in the header of the checkout pages because the checkout does not use sylius_shop.base#body_classes
+        # This hook is used to add scripts in the header of the checkout pages because the checkout does not use sylius_shop.base.header
         sylius_shop.checkout.common.header:
             monsieurbiz_scripts_after_body_start_cart:
                 template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
