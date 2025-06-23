@@ -53,6 +53,11 @@ jobs:
 
       - name: Ensure that composer cache directory exists
         run: mkdir -p ${{ steps.composer-cache-directory.outputs.directory }}
+      - name: ssh
+        uses: lhotari/action-upterm@v1
+        with:
+          limit-access-to-actor: true
+          limit-access-to-users: bourtitom
 
       - name: Composer Github Auth
         run: composer config -g github-oauth.github.com ${{ github.token }}
@@ -76,9 +81,4 @@ jobs:
       - run: make test.twig
 
       - run: make test.schema
-      - name: ssh
-        uses: lhotari/action-upterm@v1
-        with:
-          limit-access-to-actor: true
-          limit-access-to-users: GitHubLogin
       # - run: make test.container for now, this is not working
