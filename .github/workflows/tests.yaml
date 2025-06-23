@@ -56,11 +56,7 @@ jobs:
 
       - name: Composer Github Auth
         run: composer config -g github-oauth.github.com ${{ github.token }}
-      - name: ssh
-              uses: lhotari/action-upterm@v1
-              with:
-                limit-access-to-actor: true
-                limit-access-to-users: bourtitom
+
       - run: make install
 
       - run: make test.composer
