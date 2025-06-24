@@ -10,7 +10,7 @@ export MIGRATIONS_NAMESPACE=MonsieurBiz\\SyliusScriptsPlugin\\Migrations
 export USER_UID=$(shell id -u)
 PLUGIN_NAME=sylius-${COMPOSE_PROJECT_NAME}-plugin
 COMPOSE=docker compose
-YARN=$$(command -v n >/dev/null 2>&1 && echo "n --download exec auto yarn" || echo "yarn")
+YARN=yarn
 
 ###
 ### DEVELOPMENT
@@ -138,13 +138,13 @@ test.container: ## Lint the symfony container
 	${CONSOLE} lint:container
 
 test.yaml: ## Lint the symfony Yaml files
-	${CONSOLE} lint:yaml ../../src/Resources/config --parse-tags
+	${CONSOLE} lint:yaml ../../config --parse-tags
 
 test.schema: ## Validate MySQL Schema
 	${CONSOLE} doctrine:schema:validate
 
 test.twig: ## Validate Twig templates
-	${CONSOLE} lint:twig --no-debug templates/ ../../src/Resources/views/
+	${CONSOLE} lint:twig --no-debug templates/ ../../templates/
 
 ###
 ### SYLIUS
