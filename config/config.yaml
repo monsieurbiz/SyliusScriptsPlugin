@@ -1,0 +1,3 @@
+imports:
+    - { resource: 'settings.yaml' }
+    - { resource: 'twig_hooks.yaml' }

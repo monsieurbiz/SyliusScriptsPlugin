@@ -5,8 +5,8 @@ services:
         public: false
 
     MonsieurBiz\SyliusScriptsPlugin\:
-        resource: '../../*'
-        exclude: '../../{Entity,Migrations}'
+        resource: '../src/*'
+        exclude: '../src/{Entity,Migrations}'
 
     MonsieurBiz\SyliusScriptsPlugin\Controller\:
         resource: '../../Controller'
