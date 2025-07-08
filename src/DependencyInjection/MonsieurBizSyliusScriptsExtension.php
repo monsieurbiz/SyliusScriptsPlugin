@@ -12,16 +12,13 @@ declare(strict_types=1);
 
 namespace MonsieurBiz\SyliusScriptsPlugin\DependencyInjection;
 
-use Sylius\Bundle\CoreBundle\DependencyInjection\PrependDoctrineMigrationsTrait;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class MonsieurBizSyliusScriptsExtension extends Extension implements PrependExtensionInterface
+final class MonsieurBizSyliusScriptsExtension extends Extension 
 {
-    use PrependDoctrineMigrationsTrait;
 
     /**
      * @inheritdoc
@@ -32,25 +29,12 @@ final class MonsieurBizSyliusScriptsExtension extends Extension implements Prepe
         $loader->load('services.yaml');
     }
 
-    public function prepend(ContainerBuilder $container): void
+    /**
+     * @inheritdoc
+     */
+    public function getAlias(): string
     {
-        $this->prependDoctrineMigrations($container);
+        return 'monsieur_biz_sylius_scripts';
     }
 
-    protected function getMigrationsNamespace(): string
-    {
-        return 'MonsieurBiz\SyliusScriptsPlugin\Migrations';
-    }
-
-    protected function getMigrationsDirectory(): string
-    {
-        return '@MonsieurBizSyliusScriptsPlugin/Migrations';
-    }
-
-    protected function getNamespacesOfMigrationsExecutedBefore(): array
-    {
-        return [
-            'Sylius\Bundle\CoreBundle\Migrations',
-        ];
-    }
 }
