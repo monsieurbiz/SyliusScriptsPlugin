@@ -17,9 +17,8 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class MonsieurBizSyliusScriptsExtension extends Extension 
+final class MonsieurBizSyliusScriptsExtension extends Extension
 {
-
     /**
      * @inheritdoc
      */
@@ -36,5 +35,4 @@ final class MonsieurBizSyliusScriptsExtension extends Extension
     {
         return 'monsieur_biz_sylius_scripts';
     }
-
 }
