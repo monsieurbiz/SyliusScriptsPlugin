@@ -55,6 +55,9 @@ final class MonsieurBizSyliusScriptsExtension extends Extension implements Prepe
         return '@MonsieurBizSyliusScriptsPlugin/migrations';
     }
 
+    /**
+     * @return array<string>
+     */
     protected function getNamespacesOfMigrationsExecutedBefore(): array
     {
         return [
