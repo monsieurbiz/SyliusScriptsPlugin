@@ -28,7 +28,7 @@ final class MonsieurBizSyliusScriptsExtension extends Extension implements Prepe
      */
     public function load(array $config, ContainerBuilder $container): void
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
         $loader->load('services.yaml');
     }
 
@@ -37,7 +37,7 @@ final class MonsieurBizSyliusScriptsExtension extends Extension implements Prepe
      */
     public function getAlias(): string
     {
-        return 'monsieurbiz_scripts';
+        return 'monsieur_biz_sylius_scripts';
     }
 
     public function prepend(ContainerBuilder $container): void
@@ -52,9 +52,12 @@ final class MonsieurBizSyliusScriptsExtension extends Extension implements Prepe
 
     protected function getMigrationsDirectory(): string
     {
-        return '@MonsieurBizSyliusScriptsPlugin/Migrations';
+        return '@MonsieurBizSyliusScriptsPlugin/migrations';
     }
 
+    /**
+     * @return array<string>
+     */
     protected function getNamespacesOfMigrationsExecutedBefore(): array
     {
         return [

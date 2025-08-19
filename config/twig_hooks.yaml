@@ -1,0 +1,32 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_shop.base.head:
+            monsieurbiz_scripts_before_head_end:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/before_head_end.html.twig'
+                priority: -100
+
+        sylius_shop.base.header:
+            monsieurbiz_scripts_after_body_start:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
+                priority: -100
+
+        # Manage after_body_start on checkout
+        sylius_shop.checkout.common.header:
+            monsieurbiz_scripts_after_body_start:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/after_body_start.html.twig'
+                priority: -100
+
+        sylius_shop.base#javascripts:
+            monsieurbiz_scripts_before_body_end:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/before_body_end.html.twig'
+                priority: -100
+
+        sylius_shop.order.thank_you:
+            monsieurbiz_scripts_checkout_success:
+                template: '@MonsieurBizSyliusScriptsPlugin/shop/scripts/checkout_success.html.twig'
+                priority: -100
+
+        sylius_admin.base#javascripts:
+            monsieurbiz_scripts_admin_javascripts:
+                template: '@MonsieurBizSyliusScriptsPlugin/admin/scripts/javascripts.html.twig'
+                priority: -100

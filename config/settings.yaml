@@ -4,7 +4,7 @@ monsieurbiz_sylius_settings:
             vendor_name: Monsieur Biz
             plugin_name: monsieurbiz_scripts.settings.scripts.plugin_name
             description: monsieurbiz_scripts.settings.scripts.description
-            icon: js square
+            icon: ix:scripts
             use_locales: true
             classes:
                 form: MonsieurBiz\SyliusScriptsPlugin\Form\Type\Settings\ScriptsType
